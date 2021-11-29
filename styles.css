@@ -1,0 +1,48 @@
+.btn:hover {
+    background-color: RoyalBlue;
+}
+.custom-button {
+    width: 120px;
+    margin: auto;
+    padding: 10px;
+}
+.custom-button-left {
+    text-align: center;
+    left: 100px;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+.custom-button-center-left {
+    text-align: center;
+    left: 300px;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+.custom-button-center-right {
+    text-align: center;
+    left: 500px;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+.custom-button-right {
+    text-align: center;
+    left: 700px;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
+.center-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 300px;
+    height: 40px;
+}
