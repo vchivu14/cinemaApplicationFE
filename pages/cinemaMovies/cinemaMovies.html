@@ -1,0 +1,180 @@
+<body>
+    <div id="firstContainer">
+        <section class="container">
+            <h6>Movies</h6>
+            <div class="row">
+                <div class="form-group">
+                        <!--
+                            Filter for movies
+                        -->
+                    <label>
+                        <input class="light-table-filter" data-table="order-table" placeholder="Filter" type="search">
+                    </label>
+                </div>
+                <div class="form-group">
+                        <!--
+                            Buttons for starting and canceling adding movie functionality (show/hide form)
+                        -->
+                    <button id="firstContainerChildOneButtonShow" class="btn btn-success custom-button"
+                                role="button">Add Movie</button>
+                    <button id="firstContainerChildOneButtonUnShow" class="btn btn-danger custom-button">Cancel</button>
+                </div>
+            </div>
+            <table id="firstTable" class="table order-table">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Min Age</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Trailer</th>
+                    <th>Actors</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <!--
+                        * display the movies one by one (limit to 5 or 10 with pagination & search bar functionality)
+                        * when a movie from the list is clicked a form that allows to update the details of the movie will be displayed 
+                            (the current details should be displayed in the form)
+                    -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <div id="firstContainerChildOne" class="container">
+        <form id="movieUpdateForm" class="form" method="post">
+            <input id="movieId" type="hidden" value="" hidden>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label">
+                            <b>Title</b>
+                                <p id="movieTitlePlaceholder">
+                                    <!--
+                                        Title of movie to be placed here
+                                    -->
+                                </p>
+                        </label>
+                        <input id="movieTitle" class="form-control" type="text"/>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label">
+                            <b>Rating</b>
+                                <p id="movieRatingPlaceholder">
+                                    <!--
+                                       Rating of movie to be placed here
+                                    -->
+                                </p>
+                        </label>
+                        <input id="movieRating" class="form-control" type="number"/>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label">
+                            <b>Min age</b>
+                                <p id="movieMinAgePlaceholder">
+                                    <!--
+                                        Min age of movie to be placed here
+                                    -->
+                                </p>
+                        </label>
+                        <input id="movieMinAge" class="form-control" type="number"/>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label">
+                            <b>Title</b>
+                                <p id="movieDescriptionPlaceholder">
+                                    <!--
+                                        Description of movie to be placed here
+                                    -->
+                                </p>
+                        </label>
+                        <input id="movieDescription" class="form-control" type="text"/>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label"> <b>Category</b> </label>
+                        <select id="movieCategory" class="form-control">
+                            <option value=0> -- select an option -- </option>
+                            <!--
+                                Display categories here
+                            -->
+                            <option text="" value=""></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label">
+                            <b>Trailer</b>
+                                <p id="movieTitlePlaceholder">
+                                    <!--
+                                        Trailer of movie to be placed here
+                                    -->
+                                </p>
+                        </label>
+                        <input id="movieTrailer" class="form-control" type="text"/>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+    <div class="container" id="firstContainerChildTwo">
+        <form id="movieAddForm" class="form" method="post">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <label class="control-label"><b>Title</b> </label>
+                        <input id="" class="form-control" th:type="text" maxlength="90"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success custom-button">Register</button>
+                        <button id="firstContainerChildTwoButtonUnShow" type="reset" class="btn btn-warning custom-button">Hide</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="./filterForTable.js"></script>
+</body>
