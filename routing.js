@@ -16,7 +16,6 @@ import renderCinemaShows from "./pages/cinemaShows/cinemaShows.js";
 import renderLogin from "./pages/login/login.js"
 
 
-
 export default function () {
     const router = new Navigo("/", { hash: true });
   
