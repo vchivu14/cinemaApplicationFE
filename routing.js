@@ -9,36 +9,36 @@ import renderLogin from "./pages/login/login.js"
 
 export default function () {
     const router = new Navigo("/", { hash: true });
-  
+
     router
-      .on({
-        "/": () => {
-            console.log("Hello");
-        },
-        login: () => {
-            renderLogin();
-        },
-        main: () => {
-            renderMain();
-        },
-        movie: () => {
-            renderMovie();
-        },
-        shows: () => {
-            renderShows();
-        },
-        cinemaDashboard: () => {
-            renderCinemaDashboard();
-        },
-        cinemaMovies: () => {
-            renderCinemaMovies();
-        },
-        cinemaMoviesPlaying: () => {
-            renderCinemaMoviesPlaying();
-        },
-        cinemaShows: () => {
-            renderCinemaShows();
-        }
-    })
-    .resolve();
+        .on({
+            "/": () => {
+                renderMain();
+            },
+            login: () => {
+                renderLogin();
+            },
+            main: () => {
+                renderMain();
+            },
+            movie: () => {
+                renderMovie();
+            },
+            shows: () => {
+                renderShows();
+            },
+            cinemaDashboard: () => {
+                renderCinemaDashboard();
+            },
+            cinemaMovies: () => {
+                renderCinemaMovies();
+            },
+            cinemaMoviesPlaying: () => {
+                renderCinemaMoviesPlaying();
+            },
+            cinemaShows: () => {
+                renderCinemaShows();
+            }
+        })
+        .resolve();
 }
