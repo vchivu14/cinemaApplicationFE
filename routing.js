@@ -19,7 +19,7 @@ export default function () {
             renderLogin();
         },
         main: () => {
-            renderMain().then(router.updatePageLinks);
+            renderMain();
         },
         movie: () => {
             renderMovie();
