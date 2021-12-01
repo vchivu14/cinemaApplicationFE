@@ -2,10 +2,11 @@ header {
   height: 80px;
   display: flex;
   width: 100%;
-  background-color: #0b090a;
+  background-color: #000;
   padding: 0 32px;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 }
 
 header img {
