@@ -15,7 +15,7 @@ const getHTML = async () => {
     const response = await fetch("./pages/main/main.html")
     const html = await response.text()
     content.innerHTML = html;
-    // fetchData()
+    fetchData()
 }
 
 export default () => getHTML()
