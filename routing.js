@@ -22,7 +22,7 @@ export default function () {
     router
         .on({
             "/": () => {
-                console.log("Hello");
+                renderMain()
             },
             login: () => {
                 renderLogin();
