@@ -4,6 +4,7 @@ import renderMovie from "./pages/movie/movie.js";
 
 import renderShows from "./pages/shows/shows.js";
 
+import renderCinemaDashboardHeader from "./pages/cinemaDashboard/cinemaDashboardHeader.js";
 import renderCinemaDashboard from "./pages/cinemaDashboard/cinemaDashboard.js";
 
 import renderCinemaMovies from "./pages/cinemaMovies/cinemaMoviesHtml.js";
@@ -22,13 +23,10 @@ export default function () {
     router
         .on({
             "/": () => {
-                renderMain()
+                renderMain().then(router.updatePageLinks);
             },
             login: () => {
                 renderLogin();
-            },
-            main: () => {
-                renderMain();
             },
             movie: () => {
                 renderMovie();
@@ -37,6 +35,7 @@ export default function () {
                 renderShows();
             },
             cinemaDashboard: () => {
+                renderCinemaDashboardHeader().then(router.updatePageLinks);
                 renderCinemaDashboard();
             },
             cinemaMovies: () => {

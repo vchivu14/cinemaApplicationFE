@@ -1,5 +1,5 @@
 export default() => {
-    const content = document.querySelector(".content");
+    const content = document.querySelector("#content");
 
     return fetch("./pages/cinemaDashboard/cinemaDashboard.html")
         .then((response) => response.text())
