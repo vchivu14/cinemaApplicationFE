@@ -7,7 +7,7 @@ const fetchData = async () => {
         const data = await response.json()
         console.log(data)
         const listOfMoviesSection = document.querySelector("#listOfMovies");
-        // generateHtml(listOfMoviesSection, data)
+        generateHtml(listOfMoviesSection, data)
 
     } catch (error) {
         console.log(error)
