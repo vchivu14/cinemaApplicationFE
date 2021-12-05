@@ -5,9 +5,11 @@ const fetchData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/playing?theaterId=1`);
         const data = await response.json()
-        console.log(data)
+        const topMovie = document.querySelector("#topMovie>h5");
+        topMovie.innerHTML = `<h5>TOP ${data.length} CURRENTLY PLAYING MOVIES</h5>`
         const listOfMoviesSection = document.querySelector("#listOfMovies");
         generateHtml(listOfMoviesSection, data)
+
     } catch (error) {
         console.log(error)
     }
@@ -26,7 +28,6 @@ export default () => getHTML()
 const generateHtml = (parentElement, movies) => {
     let HTML = ``;
     movies.forEach(({ movieDTOFull: movie }, i) => {
-        console.log(movie)
         HTML += `
         <figure class="movieCard">
             <div class="movie__hero">
