@@ -69,6 +69,11 @@
   overflow: hidden;
 }
 
+.movieLink {
+  text-decoration: none;
+  color: unset;
+}
+
 .movie__hero {
   flex: 0 0 45%;
 }

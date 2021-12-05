@@ -29,24 +29,26 @@ const generateHtml = (parentElement, movies) => {
     let HTML = ``;
     movies.forEach(({ movieDTOFull: movie }, i) => {
         HTML += `
-        <figure class="movieCard">
-            <div class="movie__hero">
-                <img src=${movie.image} alt="Rambo" class="movie__img">
-            </div>
-            <div class="movie__content">
-                <div class="movie__title">
-                    <h1 class="heading__primary">${movie.title} <i class="fas fa-fire"></i></h1>
-                    <div class="movie__tag movie__tag--1">#${movie.category}</div>
+        <a href="/#/movie/${movie.id}" data-navigo class="movieLink">
+            <figure class="movieCard">
+                <div class="movie__hero">
+                    <img src=${movie.image} alt="Rambo" class="movie__img">
                 </div>
-                <p class="movie__description">
-                    ${movie.description}
-                </p>
-                <div class="movie__details">
-                    <p class="movie__detail">Rating: ${movie.rating}/10</p>
-                    <p class="movie__detail">Min age: ${movie.minAge}</p>
+                <div class="movie__content">
+                    <div class="movie__title">
+                        <h1 class="heading__primary">${movie.title} <i class="fas fa-fire"></i></h1>
+                        <div class="movie__tag movie__tag--1">#${movie.category}</div>
+                    </div>
+                    <p class="movie__description">
+                        ${movie.description}
+                    </p>
+                    <div class="movie__details">
+                        <p class="movie__detail">Rating: ${movie.rating}/10</p>
+                        <p class="movie__detail">Min age: ${movie.minAge}</p>
+                    </div>
                 </div>
-            </div>
-        </figure>
+            </figure>
+        </a>
         `
     });
     // loader.style.display = 'none';
