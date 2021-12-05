@@ -197,7 +197,8 @@ button:hover {
 
 footer {
   height: auto;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+  color: white;
 }
 
 .footer-copyright {
@@ -211,4 +212,8 @@ img {
   object-fit: cover;
   width: 160px;
   height: 80px;
+}
+
+.search.from {
+  color: white;
 }
