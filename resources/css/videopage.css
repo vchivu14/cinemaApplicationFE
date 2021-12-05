@@ -1,53 +1,53 @@
-.videopage {
-    color: #a4161a;
-    max-width: 70%;
-    margin: auto;
+#videopage {
+  color: #a4161a;
+  max-width: 70%;
+  margin: auto;
 }
 
 .mainIMG img {
-    width: 80%;
-    height: 80%;
-    margin-bottom: 50px;
-    display: block;
-    margin: auto;
-    margin-bottom: 30px;
+  width: 80%;
+  height: 80%;
+  margin-bottom: 50px;
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
 }
 
 .title_movie {
-    margin-bottom: 50px;
-    max-width: 80%;
-    margin: auto;
+  margin-bottom: 50px;
+  max-width: 80%;
+  margin: auto;
 }
 
-.title_movie h5{
-    font-size: 60px;
+.title_movie h5 {
+  font-size: 60px;
 }
 
 .title_movie h4 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .title_movie p {
-    color: white;
-    letter-spacing: 2.5px;
+  color: white;
+  letter-spacing: 2.5px;
 }
 
 .videoPage {
-    width: 80%;
-    position: relative;
-    padding-bottom: 56.25%;
-    margin: auto;
-    margin-bottom: 100px;
+  width: 80%;
+  position: relative;
+  padding-bottom: 56.25%;
+  margin: auto;
+  margin-bottom: 100px;
 }
 
 .iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .title_movie .desc {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
