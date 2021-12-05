@@ -8,14 +8,15 @@
  <li> Cinema Back-End repository: https://github.com/simonbucko/cinema_project.git</li> 
 </ul>
 
-### REST overview:
+### REST documentation:
 https://cinemaisus.herokuapp.com/swagger-ui/index.html#/
 
 ## Project Description
-<ul>
- <li>A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end </li>
- <li>https://cinemaisus.surge.sh/ </li>
-</ul>
+A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end </li>
+### Version 1
+https://cinemaisus.surge.sh/
+
+<hr>
 
 In this project we will use:
 <ul>
@@ -24,7 +25,9 @@ In this project we will use:
   <li>Navigo</li>
  </ul>
  
-Group BBH:
+<hr>
+
+### Group BBH:
 <ul>
  <li> Vlad Chivu
    <ol>
