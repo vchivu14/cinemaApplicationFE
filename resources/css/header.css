@@ -6,12 +6,15 @@ header {
   padding: 0 32px;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+}
+
+header .logo{
+  background-color: #a4161a;
 }
 
 header img {
-  width: 60px;
-  height: 60px;
+  width: 160px;
+  height: 80px;
 }
 
 header nav ul {
