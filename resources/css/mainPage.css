@@ -214,6 +214,13 @@ img {
   height: 80px;
 }
 
-.search.from {
+.search_from {
+  display: flex;
+  margin: auto;
+  max-width: 800px;
+}
+
+.form_search {
   color: white;
+  display: flex];
 }
