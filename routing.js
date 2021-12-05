@@ -25,8 +25,8 @@ export default function () {
             "/": () => {
                 renderMain().then(router.updatePageLinks);
             },
-            "/movie/:id": () => {
-                renderMovie()
+            "/movie/:id": (params) => {
+                renderMovie(params)
             },
             login: () => {
                 renderLogin();

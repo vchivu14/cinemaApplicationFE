@@ -1,7 +1,7 @@
-export default() => {
+export default (params) => {
     const content = document.querySelector("#content");
 
-    console.log(content);
+    console.log(params);
 
     return fetch("./pages/movie/movie.html")
         .then((response) => response.text())
