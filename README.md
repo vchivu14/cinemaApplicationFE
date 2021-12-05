@@ -1,35 +1,47 @@
 # cinemaisus
  
 ## Overview:
-Single Page Application
-Third semester KEA
-Front-End solution for Cinema project
-Cinema Back-End repository: https://github.com/simonbucko/cinema_project.git
+<ul>
+ <li> Single Page Application </li>
+ <li> Third semester at KEA Copenhagen</li> 
+ <li> Front-End solution for Cinema project</li> 
+ <li> Cinema Back-End repository: https://github.com/simonbucko/cinema_project.git</li> 
+</ul>
 
 ### REST overview:
 https://cinemaisus.herokuapp.com/swagger-ui/index.html#/
 
 ## Project Description
-A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end.
-https://cinemaisus.surge.sh/
+<ul>
+ <li>A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end </li>
+ <li>https://cinemaisus.surge.sh/ </li>
+</ul>
 
 In this project we will use:
-<ol>
+<ul>
   <li>Javascript</li>
   <li>HTML, CSS</li>
   <li>Navigo</li>
- </ol>
+ </ul>
  
 Group BBH:
-1. Vlad Chivu: 
-   1. documented back-end endpoints
-   2. set up backend server on Heroku
-   3. set up project structure
-   4. design mockup for adding movies and implementation of it
-2. Simon Bucko: 
-  
-3. Vlad Garau:
-  
- 
-
- 
+<ul>
+ <li> Vlad Chivu
+   <ol>
+    <li> documented back-end endpoints</li>
+    <li> set up backend server on Heroku</li>
+    <li> set up project structure</li>
+    <li> design mockup for adding movies and implementation of it</li>
+   </ol>
+ </li>
+ <li> Simon Bucko
+  <ol>
+    
+   </ol>
+ </li>
+ <li> Vlad Garau
+  <ol>
+    
+   </ol>
+ </li>
+</ul>
