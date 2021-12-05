@@ -4,7 +4,7 @@ import renderMovie from "./pages/movie/movie.js";
 
 import renderShows from "./pages/shows/shows.js";
 
-import renderProgram from "./pages/program/program"
+import renderProgram from "./pages/program/program.js"
 
 import renderCinemaDashboardHeader from "./pages/cinemaDashboard/cinemaDashboardHeader.js";
 import renderCinemaDashboard from "./pages/cinemaDashboard/cinemaDashboard.js";
@@ -30,8 +30,8 @@ export default function () {
             "/movie/:id": (params) => {
                 renderMovie(params)
             },
-            "/program": (params) => {
-                renderMovie(params)
+            "/program": () => {
+                renderProgram()
             },
 
             login: () => {

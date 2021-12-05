@@ -5,10 +5,9 @@ const fetchData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/playing?theaterId=1`);
         const data = await response.json()
-        const topMovie = document.querySelector("#topMovie>h5");
-        topMovie.innerHTML = `<h5>TOP ${data.length} CURRENTLY PLAYING MOVIES</h5>`
+        console.log(data)
         const listOfMoviesSection = document.querySelector("#listOfMovies");
-        generateHtml(listOfMoviesSection, data)
+        // generateHtml(listOfMoviesSection, data)
 
     } catch (error) {
         console.log(error)
@@ -17,7 +16,7 @@ const fetchData = async () => {
 
 const getHTML = async () => {
     const content = document.querySelector("#content");
-    const response = await fetch("./pages/main/main.html")
+    const response = await fetch("./pages/program/program.html")
     const html = await response.text()
     content.innerHTML = html;
     fetchData()
