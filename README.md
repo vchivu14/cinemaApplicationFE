@@ -39,12 +39,20 @@ In this project we will use:
  </li>
  <li> Simon Bucko
   <ol>
-    
+    <li>Design fronent in the figma designing tool</li>
+    <li>Create a basic structure for our customer journey</li>
+    <li>Added API functionality to main page</li>
+    <li>Added API functionality to movie page</li>
+    <li>Added API functionality to program page</li>
    </ol>
  </li>
  <li> Vlad Garau
   <ol>
-    
+    <li>implemented design accroding to mockups from figma</li>
+    <li>created main page + CSS</li>
+    <li>created program page + CSS</li>
+    <li>created movie page + CSS</li>
+    <li>together with Simon we have implemented the fetch request Api's</li>
    </ol>
  </li>
 </ul>
