@@ -222,5 +222,23 @@ img {
 
 .form_search {
   color: white;
-  display: flex];
+  display: flex;
+}
+
+.program_title {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.search_from .fname, .search_from .lname {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.search_from [type="submit"] {
+  margin-left: 20px;
+    font-size: 20px;
 }
