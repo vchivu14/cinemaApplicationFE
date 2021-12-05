@@ -1,6 +1,7 @@
 # cinemaisus
- 
+
 ## Overview:
+
 <ul>
  <li> Single Page Application </li>
  <li> Third semester at KEA Copenhagen</li> 
@@ -9,16 +10,25 @@
 </ul>
 
 ### REST documentation:
+
 https://cinemaisus.herokuapp.com/swagger-ui/index.html#/
 
 ## Project Description
+
 A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end </li>
+
 ### Version 1
+
 https://cinemaisus.surge.sh/
+
+### Video to the first sprint
+
+https://screencast-o-matic.com/watch/crlhYQV2jmL
 
 <hr>
 
 In this project we will use:
+
 <ul>
   <li>Javascript</li>
   <li>HTML, CSS</li>
@@ -28,6 +38,7 @@ In this project we will use:
 <hr>
 
 ### Group BBH:
+
 <ul>
  <li> Vlad Chivu
    <ol>
