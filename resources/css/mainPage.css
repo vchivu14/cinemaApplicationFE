@@ -21,6 +21,7 @@
 }
 
 #intro p {
+  max-width: 800px;
   color: white;
   text-align: center;
   font-size: 25px;
@@ -196,6 +197,7 @@ button:hover {
 
 footer {
   height: auto;
+  letter-spacing: 2px;
 }
 
 .footer-copyright {
