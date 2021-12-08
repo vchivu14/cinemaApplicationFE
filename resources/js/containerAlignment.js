@@ -16,7 +16,6 @@ function waitForElement() {
         let firstContainerChildOneButtonUnShow = document.querySelector("#firstContainerChildOneButtonUnShow");
         firstContainerChildOneButtonUnShow.addEventListener("click", functionUnShowFirstChildContainerOne);
     
-        functionUnShowFirstChildContainerOne();
     } else {
         setTimeout(waitForElement, 250);
     }

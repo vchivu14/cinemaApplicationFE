@@ -1,4 +1,6 @@
 import renderMain from "./pages/main/main.js";
+import renderMainResources from "./pages/main/mainResources.js";
+import renderMainHeader from "./pages/main/mainHeader.js";
 
 import renderMovie from "./pages/movie/movie.js";
 
@@ -10,7 +12,7 @@ import renderCinemaDashboardHeader from "./pages/cinemaDashboard/cinemaDashboard
 import renderCinemaDashboard from "./pages/cinemaDashboard/cinemaDashboard.js";
 
 import renderCinemaMovies from "./pages/cinemaMovies/cinemaMoviesHtml.js";
-import getCinemaMoviesFunctions from "./pages/cinemaMovies/cinemaMoviesJs.js";
+import getCinemaMoviesScripts from "./pages/cinemaMovies/cinemaMoviesJs.js";
 
 import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesPlaying.js";
 
@@ -26,12 +28,14 @@ export default function () {
         .on({
             "/": () => {
                 renderMain().then(router.updatePageLinks);
+                renderMainResources();
+                renderMainHeader();                
             },
             "/movie/:id": (params) => {
-                renderMovie(params)
+                renderMovie(params).then(router.updatePageLinks);
             },
             "/program": () => {
-                renderProgram()
+                renderProgram();
             },
 
             login: () => {
@@ -44,12 +48,13 @@ export default function () {
                 renderShows();
             },
             cinemaDashboard: () => {
-                renderCinemaDashboardHeader().then(router.updatePageLinks);
+                renderCinemaDashboardHeader();
                 renderCinemaDashboard();
             },
             cinemaMovies: () => {
+                renderCinemaDashboardHeader();
                 renderCinemaMovies();
-                getCinemaMoviesFunctions();
+                getCinemaMoviesScripts();
             },
             cinemaMoviesPlaying: () => {
                 renderCinemaMoviesPlaying();
