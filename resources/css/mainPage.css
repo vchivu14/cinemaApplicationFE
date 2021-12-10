@@ -180,8 +180,10 @@
   align-items: center;
   margin: auto;
 }
-
-button {
+#seeMore a {
+  text-decoration: none;
+}
+#seeMore button {
   padding: 10px;
   font-size: 35px;
   display: block;
@@ -189,9 +191,10 @@ button {
   align-items: center;
   margin-top: 30px;
   border-radius: 25px;
+  cursor: pointer;
 }
 
-button:hover {
+#seeMore button:hover {
   background-color: #a4161a;
 }
 
@@ -233,12 +236,13 @@ img {
   margin-bottom: 50px;
 }
 
-.search_from .fname, .search_from .lname {
+.search_from .fname,
+.search_from .lname {
   font-size: 30px;
   margin-right: 20px;
 }
 
 .search_from [type="submit"] {
   margin-left: 20px;
-    font-size: 20px;
+  font-size: 20px;
 }
