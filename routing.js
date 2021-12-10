@@ -7,6 +7,7 @@ import renderMovie from "./pages/movie/movie.js";
 import renderShows from "./pages/shows/shows.js";
 
 import renderProgram from "./pages/program/program.js"
+import renderProgramResources from "./pages/program/resources.js"
 
 import renderCinemaDashboardHeader from "./pages/cinemaDashboard/cinemaDashboardHeader.js";
 import renderCinemaDashboard from "./pages/cinemaDashboard/cinemaDashboard.js";
@@ -30,22 +31,23 @@ export default function () {
         .on({
             "/": () => {
                 //will remove all content of <head>
-                clearHeadLinks()
+                clearHeadLinks();
                 renderMainResources();
                 renderMainHeader();
                 renderMain().then(router.updatePageLinks);
             },
             "/movie/:id": (params) => {
                 //will remove all content of <head>
-                clearHeadLinks()
+                clearHeadLinks();
                 renderMainResources();
                 renderMainHeader();
                 renderMovie(params).then(router.updatePageLinks);
             },
             "/program": () => {
                 //will remove all content of <head>
-                clearHeadLinks()
+                clearHeadLinks();
                 renderMainResources();
+                renderProgramResources();
                 renderMainHeader();
                 renderProgram().then(router.updatePageLinks);
             },

@@ -19,6 +19,7 @@ const getHTML = async () => {
     const html = await response.text()
     content.innerHTML = html;
     fetchData()
+
 }
 
 export default () => getHTML()
