@@ -19,6 +19,8 @@ import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesP
 import renderCinemaShows from "./pages/cinemaShows/cinemaShows.js";
 
 import renderLogin from "./pages/login/login.js"
+//cleaning funciton 
+import clearHeadLinks from "./resources/js/clearHeadLinks.js";
 
 
 export default function () {
@@ -27,15 +29,25 @@ export default function () {
     router
         .on({
             "/": () => {
-                renderMain().then(router.updatePageLinks);
+                //will remove all content of <head>
+                clearHeadLinks()
                 renderMainResources();
-                renderMainHeader();                
+                renderMainHeader();
+                renderMain().then(router.updatePageLinks);
             },
             "/movie/:id": (params) => {
+                //will remove all content of <head>
+                clearHeadLinks()
+                renderMainResources();
+                renderMainHeader();
                 renderMovie(params).then(router.updatePageLinks);
             },
             "/program": () => {
-                renderProgram();
+                //will remove all content of <head>
+                clearHeadLinks()
+                renderMainResources();
+                renderMainHeader();
+                renderProgram().then(router.updatePageLinks);
             },
 
             login: () => {
