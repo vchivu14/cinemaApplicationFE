@@ -1,3 +1,5 @@
 .searchButton {
-  color: red;
+  background: #a4161a;
+  color: white;
+  cursor: pointer;
 }

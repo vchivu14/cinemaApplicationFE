@@ -13,13 +13,21 @@ const fetchData = async () => {
     }
 }
 
+const addListenerForFormSubmit = () => {
+    const form = document.querySelector("#dateFilter");
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        console.log("submited")
+    })
+}
+
 const getHTML = async () => {
     const content = document.querySelector("#content");
     const response = await fetch("./pages/program/program.html")
     const html = await response.text()
     content.innerHTML = html;
     fetchData()
-
+    addListenerForFormSubmit()
 }
 
 export default () => getHTML()
