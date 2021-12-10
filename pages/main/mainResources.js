@@ -1,4 +1,4 @@
-export default() => {
+export default () => {
     const headTag = document.querySelector("head");
 
     let link1 = document.createElement("link");
@@ -16,11 +16,22 @@ export default() => {
     link3.setAttribute("href", "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
     headTag.appendChild(link3);
 
+    let link8 = document.createElement("link");
+    link8.setAttribute("rel", "stylesheet");
+    link8.setAttribute("href", "https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+    headTag.appendChild(link8);
+
     let link4 = document.createElement("link");
     link4.setAttribute("rel", "stylesheet");
     link4.setAttribute("href", "/resources/css/reset.css");
     link4.setAttribute("type", "text/css");
     headTag.appendChild(link4);
+
+    let stylesCss = document.createElement("link");
+    stylesCss.setAttribute("rel", "stylesheet");
+    stylesCss.setAttribute("href", "/resources/css/styles.css");
+    stylesCss.setAttribute("type", "text/css");
+    headTag.appendChild(stylesCss);
 
     let link5 = document.createElement("link");
     link5.setAttribute("rel", "stylesheet");
