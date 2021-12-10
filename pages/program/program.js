@@ -1,11 +1,28 @@
 import { SERVER_URL } from "../../constants.js";
 
 
-const fetchData = async () => {
+const fetchInitialData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/playing?theaterId=1`);
         const data = await response.json()
+        console.log(data)
         const listOfMoviesSection = document.querySelector("#listOfMovies");
+        generateHtml(listOfMoviesSection, data)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const fetchFilteredData = async (from, to) => {
+    try {
+        console.log(from, to)
+        const response = await fetch(`${SERVER_URL}/api/playing/dates?dateStarts=${from}&dateEnds=${to}`);
+        const data = await response.json()
+        console.log(data)
+        const listOfMoviesSection = document.querySelector("#listOfMovies");
+        //remove previous content
+        listOfMoviesSection.textContent = '';
         generateHtml(listOfMoviesSection, data)
 
     } catch (error) {
@@ -17,7 +34,7 @@ const addListenerForFormSubmit = () => {
     const form = document.querySelector("#dateFilter");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log("submited")
+        fetchFilteredData(form.fromDate.value, form.toDate.value)
     })
 }
 
@@ -26,7 +43,7 @@ const getHTML = async () => {
     const response = await fetch("./pages/program/program.html")
     const html = await response.text()
     content.innerHTML = html;
-    fetchData()
+    fetchInitialData()
     addListenerForFormSubmit()
 }
 
