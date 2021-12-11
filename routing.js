@@ -1,22 +1,21 @@
+//main
 import renderMain from "./pages/main/main.js";
 import renderMainResources from "./pages/main/mainResources.js";
 import renderMainHeader from "./pages/main/mainHeader.js";
-
+// movie
 import renderMovie from "./pages/movie/movie.js";
-
-import renderShows from "./pages/shows/shows.js";
-
+// program
 import renderProgram from "./pages/program/program.js"
 import renderProgramResources from "./pages/program/resources.js"
-
-import renderCinemaDashboardHeader from "./pages/cinemaDashboard/cinemaDashboardHeader.js";
-import renderCinemaDashboard from "./pages/cinemaDashboard/cinemaDashboard.js";
-
+// dashboard
+import renderCinemaDashboardHeader from "./pages/dashboard/header.js";
+import renderCinemaDashboard from "./pages/dashboard/dashboard.js";
+// dashboard/movies
 import renderCinemaMovies from "./pages/cinemaMovies/cinemaMoviesHtml.js";
 import getCinemaMoviesScripts from "./pages/cinemaMovies/cinemaMoviesJs.js";
-
+// dashboard/playing
 import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesPlaying.js";
-
+// dashboard/shows
 import renderCinemaShows from "./pages/cinemaShows/cinemaShows.js";
 
 //cleaning funciton 
@@ -49,12 +48,6 @@ export default function () {
                 renderProgramResources();
                 renderMainHeader();
                 renderProgram().then(router.updatePageLinks);
-            },
-            movie: () => {
-                renderMovie();
-            },
-            shows: () => {
-                renderShows();
             },
             "/dashboard": () => {
                 //will remove all content of <head>

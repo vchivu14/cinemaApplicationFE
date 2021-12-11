@@ -1,4 +1,4 @@
-export default() => {
+export default () => {
     // properties removal & adding page specific resources
     const headTag = document.querySelector("head");
     while (headTag.firstChild) {
@@ -24,9 +24,8 @@ export default() => {
     if (document.querySelector("header")) {
         document.querySelector("header").innerHTML = "";
     }
-    const bodyTag = document.querySelector("body");
     const headerTag = document.querySelector("header");
-    return fetch("./pages/cinemaDashboard/cinemaDashboardHeader.html")
+    return fetch("./pages/dashboard/header.html")
         .then((response) => response.text())
         .then((theHtml) => {
             headerTag.innerHTML = theHtml;

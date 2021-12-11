@@ -1,7 +1,7 @@
-export default() => {
+export default () => {
     const content = document.querySelector("#content");
 
-    return fetch("./pages/cinemaDashboard/cinemaDashboard.html")
+    return fetch("./pages/dashboard/dashboard.html")
         .then((response) => response.text())
         .then((theHtml) => {
             content.innerHTML = theHtml;
