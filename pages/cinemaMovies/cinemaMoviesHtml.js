@@ -37,7 +37,8 @@ const addListenerForRows = () => {
     rows.forEach(row => {
         row.addEventListener("click", (e) => {
             const movieIndex = e.target.getAttribute('data-movieindex');
-            const movie = moviesList[movieIndex]
+            const movie = moviesList[movieIndex];
+            displayUpdateModal(movie);
             // updateForm.name.value = name;
         })
     })
@@ -72,7 +73,8 @@ const addListenerForCreateForm = () => {
                 //easy and primitive way how we can do this
                 fetchInitialData()
                 //reset form
-                // form.reset()
+                form.reset()
+                //hide modal and display button
                 document.getElementById("firstContainerChildOne").style.display = "none"
                 document.getElementById("firstContainerChildOneButtonShow").style.display = "block"
             })
@@ -86,7 +88,6 @@ const getHTML = async () => {
     const html = await response.text()
     content.innerHTML = html;
     fetchInitialData()
-    // addListenerForFormSubmit()
 }
 
 export default () => getHTML()
@@ -106,6 +107,10 @@ const generateHtml = (parentElement, movies) => {
     });
     // loader.style.display = 'none';
     parentElement.innerHTML = HTML;
+}
+
+const displayUpdateModal = movie => {
+
 }
 
 
