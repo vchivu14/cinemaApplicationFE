@@ -32,13 +32,10 @@ const fetchFilteredData = async (from, to) => {
 
 const addListenerForRows = () => {
     const rows = Array.from(document.querySelectorAll("tbody tr"));
-    console.log(rows);
     rows.forEach(row => {
         row.addEventListener("click", (e) => {
             const movieIndex = e.target.getAttribute('data-movieindex');
             const movie = moviesList[movieIndex]
-            console.log(moviesList)
-            console.log(movie)
             // updateForm.name.value = name;
         })
     })
