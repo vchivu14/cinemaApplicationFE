@@ -11,22 +11,8 @@ const fetchInitialData = async () => {
         const tableBody = document.querySelector("tbody");
         generateHtml(tableBody, data)
         addListenerForRows();
-        addListenerForCreateForm();
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-const fetchFilteredData = async (from, to) => {
-    try {
-        console.log(from, to)
-        const response = await fetch(`${SERVER_URL}/api/playing/dates?dateStarts=${from}&dateEnds=${to}`);
-        const data = await response.json()
-        const listOfMoviesSection = document.querySelector("#listOfMovies");
-        //remove previous content
-        listOfMoviesSection.textContent = '';
-        generateHtml(listOfMoviesSection, data)
-
+        addListenerToCloseUpdateModal();
+        addListenerForCreateMovieForm();
     } catch (error) {
         console.log(error)
     }
@@ -39,12 +25,17 @@ const addListenerForRows = () => {
             const movieIndex = e.target.getAttribute('data-movieindex');
             const movie = moviesList[movieIndex];
             displayUpdateModal(movie);
-            // updateForm.name.value = name;
         })
     })
 }
 
-const addListenerForCreateForm = () => {
+const addListenerToCloseUpdateModal = () => {
+    document.getElementById("hideUpdateMovieModal").addEventListener("click", () => {
+        document.getElementById("updateMovieModal").style.display = "none";
+    })
+}
+
+const addListenerForCreateMovieForm = () => {
     const form = document.querySelector("#movieForm");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
@@ -110,7 +101,17 @@ const generateHtml = (parentElement, movies) => {
 }
 
 const displayUpdateModal = movie => {
-
+    document.getElementById("updateMovieModal").style.display = "block";
+    const form = document.querySelector("#movieUpdateForm");
+    form.movieId.value = movie.id;
+    form.title.value = movie.title;
+    form.rating.value = movie.rating;
+    form.minAge.value = movie.minAge;
+    form.category.value = movie.categoryId;
+    form.image.value = movie.image;
+    form.trailer.value = movie.trailer;
+    form.description.value = movie.description;
+    form.actors.value = JSON.stringify(movie.actorList);
 }
 
 
