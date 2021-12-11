@@ -7,6 +7,7 @@ const fetchInitialData = async () => {
         const data = await response.json()
         //assign to global variable to be used for updating
         moviesList = data;
+        console.log(moviesList)
         const tableBody = document.querySelector("tbody");
         generateHtml(tableBody, data)
         addListenerForRows();
@@ -46,9 +47,8 @@ const addListenerForCreateForm = () => {
     const form = document.querySelector("#movieForm");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log("submited")
         const data = {
-            actorList: [...form.actors.value],
+            actorList: JSON.parse(form.actors.value),
             categoryId: form.category.value,
             description: form.description.value,
             image: form.image.value,
@@ -57,7 +57,9 @@ const addListenerForCreateForm = () => {
             title: form.title.value,
             trailer: form.trailer.value,
         }
-        console.log(data)
+        //sending actor list needs to be in JSON as input. Example below
+        //[{"firstName": "S", "lastName":"B"}] 
+
         fetch(`${SERVER_URL}/api/movies`, {
             method: 'POST',
             headers: {
@@ -67,8 +69,12 @@ const addListenerForCreateForm = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log("success")
-                console.log(data)
+                //easy and primitive way how we can do this
+                fetchInitialData()
+                //reset form
+                // form.reset()
+                document.getElementById("firstContainerChildOne").style.display = "none"
+                document.getElementById("firstContainerChildOneButtonShow").style.display = "block"
             })
             .catch(error => console.log(error));
     })
