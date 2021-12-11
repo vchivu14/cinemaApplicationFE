@@ -10,6 +10,7 @@ const fetchInitialData = async () => {
         const tableBody = document.querySelector("tbody");
         generateHtml(tableBody, data)
         addListenerForRows();
+        addListenerForCreateForm();
     } catch (error) {
         console.log(error)
     }
@@ -41,11 +42,35 @@ const addListenerForRows = () => {
     })
 }
 
-const addListenerForFormSubmit = () => {
-    const form = document.querySelector("#dateFilter");
+const addListenerForCreateForm = () => {
+    const form = document.querySelector("#movieForm");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        fetchFilteredData(form.fromDate.value, form.toDate.value)
+        console.log("submited")
+        const data = {
+            actorList: [...form.actors.value],
+            categoryId: form.category.value,
+            description: form.description.value,
+            image: form.image.value,
+            minAge: form.minAge.value,
+            rating: form.rating.value,
+            title: form.title.value,
+            trailer: form.trailer.value,
+        }
+        console.log(data)
+        fetch(`${SERVER_URL}/api/movies`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("success")
+                console.log(data)
+            })
+            .catch(error => console.log(error));
     })
 }
 
