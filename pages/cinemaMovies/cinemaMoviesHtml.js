@@ -1,13 +1,15 @@
 import { SERVER_URL } from "../../constants.js";
-
+let moviesList = [];
 
 const fetchInitialData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/movies?theaterId=1`);
         const data = await response.json()
+        //assign to global variable to be used for updating
+        moviesList = data;
         const tableBody = document.querySelector("tbody");
         generateHtml(tableBody, data)
-
+        addListenerForRows();
     } catch (error) {
         console.log(error)
     }
@@ -26,6 +28,20 @@ const fetchFilteredData = async (from, to) => {
     } catch (error) {
         console.log(error)
     }
+}
+
+const addListenerForRows = () => {
+    const rows = Array.from(document.querySelectorAll("tbody tr"));
+    console.log(rows);
+    rows.forEach(row => {
+        row.addEventListener("click", (e) => {
+            const movieIndex = e.target.getAttribute('data-movieindex');
+            const movie = moviesList[movieIndex]
+            console.log(moviesList)
+            console.log(movie)
+            // updateForm.name.value = name;
+        })
+    })
 }
 
 const addListenerForFormSubmit = () => {
@@ -51,12 +67,12 @@ const generateHtml = (parentElement, movies) => {
     let HTML = ``;
     movies.forEach((movie, i) => {
         HTML += `
-        <tr>
-            <th>${movie.id}</th>
-            <th>${movie.title}</th>
-            <th>${movie.rating}</th>
-            <th>${movie.minAge}</th>
-            <th colspan="2">${movie.category}</th>
+        <tr data-movieindex=${i}>
+            <th data-movieindex=${i}>${movie.id}</th>
+            <th data-movieindex=${i}>${movie.title}</th>
+            <th data-movieindex=${i}>${movie.rating}</th>
+            <th data-movieindex=${i}>${movie.minAge}</th>
+            <th colspan="2" data-movieindex=${i}>${movie.category}</th>
         </tr>
         `
     });

@@ -6,5 +6,4 @@ export default () => {
     link.setAttribute("href", "/resources/css/cinemaMoviesPage.css");
     link.setAttribute("type", "text/css");
     headTag.appendChild(link);
-    console.log("hello")
 }
