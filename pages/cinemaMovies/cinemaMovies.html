@@ -29,7 +29,8 @@
     </section>
 </div>
 
-<div id="firstContainerChildOne" class="container" style="visibility: hidden;">
+<!-- section for creating a movie -->
+<div id="firstContainerChildOne" class="container" style="display: none;">
     <form id="movieForm" class="form div-wrapper" method="post">
         <input id="movieId" type="hidden" value="">
 
@@ -121,7 +122,108 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
                 <div class="form-group">
-                    <button type="submit" class="btn btn-warning custom-button">Save</button>
+                    <button type="submit" class="btn btn-success custom-button">Create</button>
+                    <button id="firstContainerChildOneButtonUnShow" type="reset" class="btn btn-danger custom-button">Hide</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- section for updating a movie -->
+<div id="updateMovieModal" class="container" style="display: block;">
+    <form id="movieForm" class="form div-wrapper" method="post">
+        <input id="movieId" type="hidden" value="">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label">
+                        <b>Title</b>
+                    </label>
+                    <input id="movieTitle" class="form-control" type="text"/>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label">
+                        <b>Rating</b>
+                    </label>
+                    <input id="movieRating" class="form-control" type="number"/>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>Min age</b> </label>
+                    <input id="movieMinAge" class="form-control" type="number"/>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>Category</b> </label>
+                    <br>
+                    <select id="movieCategory" class="form-control">
+                        <br>
+                        <option value=0> -- select an option -- </option>
+                        <!--
+                            Display categories here
+                        -->
+                        <option text="" value=""></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-3">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="form-group">
+                            <label class="control-label">
+                                <b>Image</b>
+                            </label>
+                            <input id="movieTitle" class="form-control" type="text"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="form-group">
+                            <label class="control-label">
+                                <b>Trailer</b>
+                            </label>
+                            <input id="movieTitle" class="form-control" type="text"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-3">
+                        <div class="form-group">
+                            <label class="control-label">
+                                <b>Description</b>
+                            </label>
+                            <textarea class="form-control" id="movieDescription" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label">
+                        <b>Actors</b>
+                    </label>
+                    <textarea class="form-control" id="movieDescription" rows="7"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning custom-button">Update</button>
                     <button id="firstContainerChildOneButtonUnShow" type="reset" class="btn btn-danger custom-button">Hide</button>
                 </div>
             </div>
