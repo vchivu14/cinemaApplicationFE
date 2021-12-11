@@ -19,7 +19,6 @@ import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesP
 
 import renderCinemaShows from "./pages/cinemaShows/cinemaShows.js";
 
-import renderLogin from "./pages/login/login.js"
 //cleaning funciton 
 import clearHeadLinks from "./resources/js/clearHeadLinks.js";
 
@@ -51,21 +50,19 @@ export default function () {
                 renderMainHeader();
                 renderProgram().then(router.updatePageLinks);
             },
-
-            login: () => {
-                renderLogin();
-            },
             movie: () => {
                 renderMovie();
             },
             shows: () => {
                 renderShows();
             },
-            cinemaDashboard: () => {
+            "/dashboard": () => {
+                //will remove all content of <head>
+                clearHeadLinks();
                 renderCinemaDashboardHeader();
                 renderCinemaDashboard();
             },
-            cinemaMovies: () => {
+            "/dashboard/movies": () => {
                 renderCinemaDashboardHeader();
                 renderCinemaMovies();
                 getCinemaMoviesScripts();
