@@ -5,7 +5,6 @@ const fetchInitialData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/playing?theaterId=1`);
         const data = await response.json()
-        console.log(data)
         const listOfMoviesSection = document.querySelector("#listOfMovies");
         generateHtml(listOfMoviesSection, data)
 
@@ -19,7 +18,6 @@ const fetchFilteredData = async (from, to) => {
         console.log(from, to)
         const response = await fetch(`${SERVER_URL}/api/playing/dates?dateStarts=${from}&dateEnds=${to}`);
         const data = await response.json()
-        console.log(data)
         const listOfMoviesSection = document.querySelector("#listOfMovies");
         //remove previous content
         listOfMoviesSection.textContent = '';
