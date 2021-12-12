@@ -16,6 +16,7 @@ import getCinemaMoviesScripts from "./pages/cinemaMovies/cinemaMoviesJs.js";
 import renderCinemaMoviesResources from "./pages/cinemaMovies/resources.js"
 // dashboard/playing
 import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesPlaying.js";
+import renderCinemaMoviesPlayingResources from "./pages/cinemaMoviesPlaying/resources.js"
 // dashboard/shows
 import renderCinemaShows from "./pages/cinemaShows/cinemaShows.js";
 
@@ -68,7 +69,7 @@ export default function () {
                 //will remove all content of <head>
                 clearHeadLinks();
                 renderCinemaDashboardHeader();
-                renderCinemaMoviesResources();
+                renderCinemaMoviesPlayingResources();
                 renderCinemaMoviesPlaying();
             },
             cinemaShows: () => {

@@ -1,1 +1,137 @@
-hello
+<div id="firstContainer">
+    <section class="container">
+        <h6>Movies</h6>
+            <label>
+                <input class="light-table-filter" data-table="order-table" placeholder="Filter" type="search">
+            </label>
+        <table id="firstTable" class="table order-table">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Title</th>
+                <th>Starting date</th>
+                <th>Ending date</th>
+                <th>
+                    <button id="firstContainerChildOneButtonShow" class="btn btn-success custom-button" 
+                        role="button">Add Movie</button>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+                <!--
+                    * display the movies one by one (limit to 5 or 10 with pagination & search bar functionality)
+                    * when a movie from the list is clicked a form that allows to update the details of the movie will be displayed 
+                        (the current details should be displayed in the form)
+                -->
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<!-- section for adding a movie -->
+<div id="firstContainerChildOne" class="container" style="display: none;">
+    <form id="movieForm" class="form div-wrapper" method="post">
+        <input id="movieId" type="hidden" value="">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>Movie List</b> </label>
+                    <br>
+                    <select name="category" id="movieCategory" class="form-control">
+                        <option value=1>Drama</option>
+                        <option value=2>Comedy</option>
+                        <option value=3>Sci-fy</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label">
+                        <b>Start date</b>
+                    </label>
+                    <input type="date" id="fromDate" name="fromDate" required>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>End date</b> </label>
+                    <input type="date" id="toDate" name="toDate" required>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success custom-button">Save</button>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button id="firstContainerChildOneButtonUnShow" type="reset" class="btn btn-warning custom-button">Close</button>  
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- section for updating a movie -->
+<div id="updateMovieModal" class="container" style="display: none;">
+    <form id="movieUpdateForm" class="form div-wrapper" method="post">
+        <input name="movieId" id="movieId" type="hidden" value="">
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>Movie List</b> </label>
+                    <br>
+                    <select name="category" id="movieCategory" class="form-control">
+                        <option value=1>Drama</option>
+                        <option value=2>Comedy</option>
+                        <option value=3>Sci-fy</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label">
+                        <b>Start date</b>
+                    </label>
+                    <input type="date" id="fromDate" name="fromDate" required>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <label class="control-label"> <b>End date</b> </label>
+                    <input type="date" id="toDate" name="toDate" required>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success custom-button">Update</button>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button id="hideUpdateMovieModal" type="reset" class="btn btn-warning custom-button">Close</button>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button type="reset" class="btn btn-danger custom-button">Delete</button>
+                </div>
+            </div> 
+        </div>
+    </form>
+</div>
