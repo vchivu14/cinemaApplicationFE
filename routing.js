@@ -64,7 +64,11 @@ export default function () {
                 renderCinemaMovies();
                 getCinemaMoviesScripts();
             },
-            cinemaMoviesPlaying: () => {
+            "/dashboard/playing": () => {
+                //will remove all content of <head>
+                clearHeadLinks();
+                renderCinemaDashboardHeader();
+                renderCinemaMoviesResources();
                 renderCinemaMoviesPlaying();
             },
             cinemaShows: () => {
