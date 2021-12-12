@@ -25,6 +25,14 @@ https://cinemaisus.surge.sh/
 
 https://screencast-o-matic.com/watch/crlhYQV2jmL
 
+### Version 2
+
+https://cinemaisus.surge.sh/
+
+### Video to the first sprint
+
+https://screencast-o-matic.com/watch/crll3aV2USE
+
 <hr>
 
 In this project we will use:
@@ -55,12 +63,17 @@ In this project we will use:
   </ol>
  </li>
  <li> Simon Bucko
-  <ol>
+  <ol> 1st Sprint
     <li>Design fronent in the figma designing tool</li>
     <li>Create a basic structure for our customer journey</li>
     <li>Added API functionality to main page</li>
     <li>Added API functionality to movie page</li>
     <li>Added API functionality to program page</li>
+   </ol>
+  <ol> 2st Sprint
+    <li>Finished the API functionality on program page</li>
+    <li>Worked on dashboard/movies page</li>
+    <li>Helped with creation other pages for dashboard</li>
    </ol>
  </li>
  <li> Vlad Garau
