@@ -12,6 +12,8 @@ const fetchInitialData = async () => {
         moviesPlayingList = await responsePlaying.json()
         console.log(moviesPlayingList)
         const tableBody = document.querySelector("tbody");
+        const categoryCreateSelect = document.querySelector("#movieCategoryCreate");
+        generateMoviesOptions(categoryCreateSelect);
         generateHtml(tableBody, moviesPlayingList)
         addListenerForRows();
         addListenerToCloseUpdateModal();
@@ -26,8 +28,8 @@ const addListenerForRows = () => {
     const rows = Array.from(document.querySelectorAll("tbody tr"));
     rows.forEach(row => {
         row.addEventListener("click", (e) => {
-            const movieIndex = e.target.getAttribute('data-movieindex');
-            const movie = moviesList[movieIndex];
+            const listIndex = e.target.getAttribute('data-movieindex');
+            const movie = moviesPlayingList[listIndex];
             displayUpdateModal(movie);
         })
     })
@@ -129,13 +131,24 @@ const generateHtml = (parentElement, moviesPlaying) => {
     parentElement.innerHTML = HTML;
 }
 
+const generateMoviesOptions = (parentElement) => {
+    let HTML = ``;
+    moviesList.forEach((movie, i) => {
+        HTML += `
+            <option value=${movie.id}>${movie.title}</option>
+        `
+    });
+    parentElement.innerHTML = HTML;
+}
+
 const displayUpdateModal = movie => {
+    console.log()
     document.getElementById("updateMovieModal").style.display = "block";
     const form = document.querySelector("#movieUpdateForm");
-    form.movieId.value = movie.id;
-    form.title.value = movie.title;
-    form.fromDate.value = movie.fromDate;
-    form.toDate.value = movie.toDate;
+    form.movieId.value = movie.movieDTOFull.id;
+    form.category.value = movie.movieDTOFull.title;
+    form.fromDate.value = movie.dateStarts;
+    form.toDate.value = movie.dateEnds;
 }
 
 
