@@ -41,14 +41,8 @@ const addListenerForCreateMovieForm = () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         const data = {
-            actorList: JSON.parse(form.actors.value),
-            categoryId: form.category.value,
-            description: form.description.value,
-            image: form.image.value,
-            minAge: form.minAge.value,
-            rating: form.rating.value,
-            title: form.title.value,
-            trailer: form.trailer.value,
+            fromDate: form.fromDate.value,
+            toDate: form.toDate.value,
         }
         //sending actor list needs to be in JSON as input. Example below
         //[{"firstName": "S", "lastName":"B"}] 
@@ -80,14 +74,8 @@ const addListenerForUpdateMovieForm = () => {
         e.preventDefault()
         const data = {
             id: form.movieId.value,
-            actorList: JSON.parse(form.actors.value),
-            categoryId: form.category.value,
-            description: form.description.value,
-            image: form.image.value,
-            minAge: form.minAge.value,
-            rating: form.rating.value,
-            title: form.title.value,
-            trailer: form.trailer.value,
+            fromDate: form.fromDate.value,
+            toDate: form.toDate.value,
         }
         //sending actor list needs to be in JSON as input. Example below
         //[{"firstName": "S", "lastName":"B"}] 
@@ -129,9 +117,8 @@ const generateHtml = (parentElement, movies) => {
         <tr data-movieindex=${i}>
             <th data-movieindex=${i}>${movie.id}</th>
             <th data-movieindex=${i}>${movie.title}</th>
-            <th data-movieindex=${i}>${movie.rating}</th>
-            <th data-movieindex=${i}>${movie.minAge}</th>
-            <th colspan="2" data-movieindex=${i}>${movie.category}</th>
+            <th data-movieindex=${i}>${movie.fromDate}</th>
+            <th data-movieindex=${i}>${movie.toDate}</th>
         </tr>
         `
     });
@@ -144,13 +131,8 @@ const displayUpdateModal = movie => {
     const form = document.querySelector("#movieUpdateForm");
     form.movieId.value = movie.id;
     form.title.value = movie.title;
-    form.rating.value = movie.rating;
-    form.minAge.value = movie.minAge;
-    form.category.value = movie.categoryId;
-    form.image.value = movie.image;
-    form.trailer.value = movie.trailer;
-    form.description.value = movie.description;
-    form.actors.value = JSON.stringify(movie.actorList);
+    form.fromDate.value = movie.fromDate;
+    form.toDate.value = movie.toDate;
 }
 
 
