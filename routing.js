@@ -71,6 +71,7 @@ export default function () {
                 renderCinemaDashboardHeader();
                 renderCinemaMoviesPlayingResources();
                 renderCinemaMoviesPlaying();
+                getCinemaMoviesScripts();
             },
             "/dashboard/shows": () => {
                 clearHeadLinks();
