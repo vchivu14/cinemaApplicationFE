@@ -6,6 +6,6 @@ table {
 }
 
 /* Define the hover highlight color for the table row*/
-.order-table tr:hover {
+.order-table tbody tr:hover {
   background-color:aquamarine;
 }
