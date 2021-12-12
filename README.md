@@ -29,7 +29,7 @@ https://screencast-o-matic.com/watch/crlhYQV2jmL
 
 https://cinemaisus.surge.sh/
 
-### Video to the first sprint
+### Video to the second sprint
 
 https://screencast-o-matic.com/watch/crll3aV2USE
 
