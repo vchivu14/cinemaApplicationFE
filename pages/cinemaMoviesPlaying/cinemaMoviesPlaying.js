@@ -1,15 +1,18 @@
 import { SERVER_URL } from "../../constants.js";
 let moviesList = [];
+let moviesPlayingList = []
 
 const fetchInitialData = async () => {
     try {
         const response = await fetch(`${SERVER_URL}/api/movies?theaterId=1`);
-        const data = await response.json()
         //assign to global variable to be used for updating
-        moviesList = data;
+        moviesList = await response.json()
         console.log(moviesList)
+        const responsePlaying = await fetch(`${SERVER_URL}/api/playing?theaterId=1`);
+        moviesPlayingList = await responsePlaying.json()
+        console.log(moviesPlayingList)
         const tableBody = document.querySelector("tbody");
-        generateHtml(tableBody, data)
+        generateHtml(tableBody, moviesPlayingList)
         addListenerForRows();
         addListenerToCloseUpdateModal();
         addListenerForCreateMovieForm();
@@ -110,15 +113,15 @@ const getHTML = async () => {
 
 export default () => getHTML()
 
-const generateHtml = (parentElement, movies) => {
+const generateHtml = (parentElement, moviesPlaying) => {
     let HTML = ``;
-    movies.forEach((movie, i) => {
+    moviesPlaying.forEach((movie, i) => {
         HTML += `
         <tr data-movieindex=${i}>
-            <th data-movieindex=${i}>${movie.id}</th>
-            <th data-movieindex=${i}>${movie.title}</th>
-            <th data-movieindex=${i}>${movie.fromDate}</th>
-            <th data-movieindex=${i}>${movie.toDate}</th>
+            <th data-movieindex=${i}>${movie.movieDTOFull.id}</th>
+            <th data-movieindex=${i}>${movie.movieDTOFull.title}</th>
+            <th data-movieindex=${i}>${new Date(movie.dateStarts).toLocaleDateString()}</th>
+            <th data-movieindex=${i}>${new Date(movie.dateEnds).toLocaleDateString()}</th>
         </tr>
         `
     });
