@@ -45,31 +45,32 @@ const addListenerForCreateMovieForm = () => {
     const form = document.querySelector("#movieForm");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        const data = {
-            fromDate: form.fromDate.value,
-            toDate: form.toDate.value,
-        }
-        //sending actor list needs to be in JSON as input. Example below
-        //[{"firstName": "S", "lastName":"B"}] 
+        console.log("you have submited this u bastard")
+        // const data = {
+        //     fromDate: form.fromDate.value,
+        //     toDate: form.toDate.value,
+        // }
+        // //sending actor list needs to be in JSON as input. Example below
+        // //[{"firstName": "S", "lastName":"B"}] 
 
-        fetch(`${SERVER_URL}/api/movies`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-            .then(response => response.json())
-            .then(data => {
-                //easy and primitive way how we can do this
-                fetchInitialData()
-                //reset form
-                form.reset()
-                //hide modal and display button
-                document.getElementById("firstContainerChildOne").style.display = "none"
-                document.getElementById("firstContainerChildOneButtonShow").style.display = "block"
-            })
-            .catch(error => console.log(error));
+        // fetch(`${SERVER_URL}/api/movies`, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(data),
+        // })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         //easy and primitive way how we can do this
+        //         fetchInitialData()
+        //         //reset form
+        //         form.reset()
+        //         //hide modal and display button
+        //         document.getElementById("firstContainerChildOne").style.display = "none"
+        //         document.getElementById("firstContainerChildOneButtonShow").style.display = "block"
+        //     })
+        //     .catch(error => console.log(error));
     })
 }
 
@@ -142,13 +143,18 @@ const generateMoviesOptions = (parentElement) => {
 }
 
 const displayUpdateModal = movie => {
-    console.log()
     document.getElementById("updateMovieModal").style.display = "block";
     const form = document.querySelector("#movieUpdateForm");
     form.movieId.value = movie.movieDTOFull.id;
     form.category.value = movie.movieDTOFull.title;
-    form.fromDate.value = movie.dateStarts;
-    form.toDate.value = movie.dateEnds;
+    form.fromDate.value = formatDate(new Date(movie.dateStarts));
+    form.toDate.value = formatDate(new Date(movie.dateEnds));
+}
+
+const formatDate = date => {
+    const formatedDate = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+    console.log(formatedDate)
+    return formatedDate
 }
 
 
