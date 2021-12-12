@@ -45,7 +45,6 @@ const addListenerForCreateMovieForm = () => {
     const form = document.querySelector("#movieForm");
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        console.log("you have submited this u bastard")
         // const data = {
         //     fromDate: form.fromDate.value,
         //     toDate: form.toDate.value,
@@ -152,7 +151,7 @@ const displayUpdateModal = movie => {
 }
 
 const formatDate = date => {
-    const formatedDate = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+    const formatedDate = `${date.getFullYear()}-${date.getMonth() < 10 ? "0" : ""}${date.getMonth()}-${date.getDate() < 10 ? "0" : ""}${date.getDate()}`
     console.log(formatedDate)
     return formatedDate
 }
