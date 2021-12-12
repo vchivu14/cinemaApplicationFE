@@ -64,6 +64,8 @@ In this project we will use:
     <li>created program page + CSS</li>
     <li>created movie page + CSS</li>
     <li>together with Simon we have implemented the fetch request Api's</li>
+    <li>created cinemaMoviesPlaying page + CSS + JS</li>
+    <li>Assisted Simon on building the program's page JS</li>
    </ol>
  </li>
 </ul>
