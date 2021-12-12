@@ -110,7 +110,26 @@
                     <label class="control-label">
                         <b>Actors</b>
                     </label>
-                    <textarea name="actors" class="form-control" id="movieDescription" rows="7"></textarea>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-3">
+                            <button class="btn btn-warning custom-button" role="button">Add Another</button>
+                        </div>
+                        <div class="col-md-4 col-md-offset-3">
+                            <button id="actorSubmit" class="btn btn-success custom-button" role="button">Save</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-3">
+                            <div class="form-group">
+                                <label for="firstNname">First Name: </label>
+                                <input id="firstName" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">First Name: </label>
+                                <input id="lastName" type="text">
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -126,6 +145,11 @@
                     <button id="firstContainerChildOneButtonUnShow" type="reset" class="btn btn-warning custom-button">Hide</button>  
                 </div>
             </div>
+            <div class="col-md-2 col-md-offset-3">
+                <div class="form-group">
+                    <button type="reset" class="btn btn-danger custom-button">Clear</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>
@@ -134,7 +158,6 @@
 <div id="updateMovieModal" class="container" style="display: none;">
     <form id="movieUpdateForm" class="form div-wrapper" method="post">
         <input name="movieId" id="movieId" type="hidden" value="">
-
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
                 <div class="form-group">

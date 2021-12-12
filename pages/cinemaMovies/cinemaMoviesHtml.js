@@ -152,5 +152,3 @@ const displayUpdateModal = movie => {
     form.description.value = movie.description;
     form.actors.value = JSON.stringify(movie.actorList);
 }
-
-

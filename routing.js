@@ -13,7 +13,7 @@ import renderCinemaDashboard from "./pages/dashboard/dashboard.js";
 // dashboard/movies
 import renderCinemaMovies from "./pages/cinemaMovies/cinemaMoviesHtml.js";
 import getCinemaMoviesScripts from "./pages/cinemaMovies/cinemaMoviesJs.js";
-import renderCinemaMoviesResources from "./pages/cinemaMovies/resources.js"
+import renderCinemaMoviesResources from "./pages/cinemaMovies/resources.js";
 // dashboard/playing
 import renderCinemaMoviesPlaying from "./pages/cinemaMoviesPlaying/cinemaMoviesPlaying.js";
 import renderCinemaMoviesPlayingResources from "./pages/cinemaMoviesPlaying/resources.js"
@@ -71,9 +71,14 @@ export default function () {
                 renderCinemaDashboardHeader();
                 renderCinemaMoviesPlayingResources();
                 renderCinemaMoviesPlaying();
+                getCinemaMoviesScripts();
             },
-            cinemaShows: () => {
+            "/dashboard/shows": () => {
+                clearHeadLinks();
+                renderCinemaDashboardHeader();
+                renderCinemaMoviesResources();
                 renderCinemaShows();
+                getCinemaMoviesScripts();
             }
         })
         .resolve();
