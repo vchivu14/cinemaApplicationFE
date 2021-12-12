@@ -1,3 +1,11 @@
 table {
   border: 1px solid #dee2e6;
 }
+.order-table tr {
+  cursor: pointer;
+}
+
+/* Define the hover highlight color for the table row*/
+.order-table tr:hover {
+  background-color:aquamarine;
+}
