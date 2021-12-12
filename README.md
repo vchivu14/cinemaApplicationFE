@@ -41,12 +41,18 @@ In this project we will use:
 
 <ul>
  <li> Vlad Chivu
-   <ol>
+   <ol> 1st Sprint
     <li> documented back-end endpoints</li>
     <li> set up backend server on Heroku</li>
     <li> set up project structure</li>
     <li> design mockup for adding movies and implementation of it</li>
    </ol>
+  <ol> 2nd Sprint
+    <li> created the structure for cinema dashboard pages
+    <li> filter functionality for cinema movie tables
+    <li> created and styled form used in movie creation
+    <li> deployment with surge
+  </ol>
  </li>
  <li> Simon Bucko
   <ol>
