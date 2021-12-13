@@ -25,9 +25,6 @@ https://cinemaisus.surge.sh/
 
 https://screencast-o-matic.com/watch/crlhYQV2jmL
 
-### Version 2
-
-https://cinemaisus.surge.sh/
 
 ### Video to the second sprint
 
@@ -59,7 +56,6 @@ In this project we will use:
     <li> created the structure for cinema dashboard pages
     <li> filter functionality for cinema movie tables
     <li> created and styled form used in movie creation
-    <li> deployment with surge
   </ol>
  </li>
  <li> Simon Bucko
