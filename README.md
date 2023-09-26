@@ -1,7 +1,7 @@
 # Cinema business franchise #
 
 # Overview: 
-A FE solution for a cinema franchise based on the capabilities of the REST API mentioned above </li>
+A FE solution for a cinema franchise based on the capabilities of the REST API mentioned at the bottom </li>
 
 # In this project we will use:
 <ul>
