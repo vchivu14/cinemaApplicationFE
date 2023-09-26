@@ -1,86 +1,51 @@
-# cinemaisus
- 
-## Overview:
+# Cinema business franchise #
 
-<ul>
- <li> Single Page Application </li>
- <li> Third semester at KEA Copenhagen</li> 
- <li> Front-End solution for Cinema project</li> 
- <li> Cinema Back-End repository: https://github.com/simonbucko/cinema_project.git</li> 
-</ul>
+# BE Project: https://github.com/vchivu14/cinemaApplicationBE
 
-### REST documentation:
+# Overview: A FE solution for a cinema franchise based on the capabilities of the REST API mentioned above </li>
 
-https://cinemaisus.herokuapp.com/swagger-ui/index.html#/
-
-## Project Description
-
-A cinema franchise wants a front-end solution based on the capabilities of the above mentioned back-end </li>
-
-### Version 1
-
-https://cinemaisus.surge.sh/
-
-### Video to the first sprint
-
-https://screencast-o-matic.com/watch/crlhYQV2jmL
-
-
-### Video to the second sprint
-
-https://screencast-o-matic.com/watch/crll3aV2USE
-
-<hr>
-
-In this project we will use:
-
+# In this project we will use:
 <ul>
   <li>Javascript</li>
   <li>HTML, CSS</li>
   <li>Navigo</li>
- </ul>
- 
-<hr>
+</ul>
 
-### Group BBH:
+# Video presentation of 1st sprint: https://screencast-o-matic.com/watch/crlhYQV2jmL
 
+# Video presentation of 2nd sprint: https://screencast-o-matic.com/watch/crll3aV2USE
+
+# Online Version: https://cinemaisus.surge.sh/
+
+# Responsabilities:
 <ul>
- <li> Vlad Chivu
+ <li> Vlad Chivu (back-end)
    <ol> 1st Sprint
+    <li> set up Spring project structure</li>
+    <li> designed the database</li>
+    <li> designed endpoints </li>
     <li> documented back-end endpoints</li>
     <li> set up backend server on Heroku</li>
-    <li> set up project structure</li>
-    <li> design mockup for adding movies and implementation of it</li>
+    <li> designed page mockup for adding movies and implementation of it</li>
    </ol>
-  <ol> 2nd Sprint
-    <li> created the structure for cinema dashboard pages
-    <li> filter functionality for cinema movie tables
-    <li> created and styled form used in movie creation
-  </ol>
+   <ol> 2nd Sprint
+    <li> Created the structure for cinema dashboard pages
+    <li> Created filter functionality for cinema movie tables
+    <li> Created and styled form used in movie creation
+   </ol>
  </li>
- <li> Simon Bucko
+ <li> Simon Bucko (front-end)
   <ol> 1st Sprint
-    <li>Design fronent in the figma designing tool</li>
+    <li>Designed front-end in the Figma designing tool</li>
     <li>Create a basic structure for our customer journey</li>
-    <li>Added API functionality to main page</li>
-    <li>Added API functionality to movie page</li>
-    <li>Added API functionality to program page</li>
-   </ol>
+    <li>implemented initial design according to mockups from figma</li>
+  </ol>
   <ol> 2st Sprint
-    <li>Finished the API functionality on program page</li>
-    <li>Worked on dashboard/movies page</li>
-    <li>Helped with creation other pages for dashboard</li>
-   </ol>
- </li>
- <li> Vlad Garau
-  <ol>
-    <li>implemented design accroding to mockups from figma</li>
     <li>created main page + CSS</li>
     <li>created program page + CSS</li>
     <li>created movie page + CSS</li>
-    <li>together with Simon we have implemented the fetch request Api's</li>
-    <li>created cinemaMoviesPlaying page + CSS + JS</li>
-    <li>Assisted Simon on building the program's page JS</li>
-   </ol>
+    <li>created dashboard/movies page + CSS</li>
+    <li>Connected back-end REST APIs on front-end</li>
+  </ol>
  </li>
 </ul>
