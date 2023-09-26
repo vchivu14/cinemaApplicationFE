@@ -1,8 +1,7 @@
 # Cinema business franchise #
 
-# BE Project: https://github.com/vchivu14/cinemaApplicationBE
-
-# Overview: A FE solution for a cinema franchise based on the capabilities of the REST API mentioned above </li>
+# Overview: 
+A FE solution for a cinema franchise based on the capabilities of the REST API mentioned above </li>
 
 # In this project we will use:
 <ul>
@@ -11,11 +10,14 @@
   <li>Navigo</li>
 </ul>
 
-# Video presentation of 1st sprint: https://screencast-o-matic.com/watch/crlhYQV2jmL
+# Video presentation of 1st sprint: 
+https://screencast-o-matic.com/watch/crlhYQV2jmL
 
-# Video presentation of 2nd sprint: https://screencast-o-matic.com/watch/crll3aV2USE
+# Video presentation of 2nd sprint: 
+https://screencast-o-matic.com/watch/crll3aV2USE
 
-# Online Version: https://cinemaisus.surge.sh/
+# Online Version: 
+https://cinemaisus.surge.sh/
 
 # Responsabilities:
 <ul>
@@ -49,3 +51,6 @@
   </ol>
  </li>
 </ul>
+
+# BE Project: 
+https://github.com/vchivu14/cinemaApplicationBE
