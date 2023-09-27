@@ -24,26 +24,26 @@ https://cinemaisus.surge.sh/
 # Responsabilities:
 <ul>
  <li> Vlad Chivu (back-end)
-   <ol> <b>1st Sprint:<b>
+   <ol> <b>1st Sprint:</b>
     <li> set up Spring project </li>
     <li> designed the database </li>
     <li> designed & implemented endpoints </li>
     <li> documented endpoints </li>
     <li> set up backend server on Heroku </li>
    </ol>
-   <ol> <b>2nd Sprint:<b>
+   <ol> <b>2nd Sprint:</b>
     <li> created the structure for cinema dashboard pages
     <li> created filter functionality for cinema movies
     <li> designed & created a page for adding movies
    </ol>
  </li>
  <li> Simon Bucko (front-end)
-  <ol> <b>1st Sprint:<b>
+  <ol> <b>1st Sprint:</b>
     <li> designed front-end using Figma designing tool </li>
     <li> created a basic structure for our customer journey </li>
     <li> implemented initial design according to mockups </li>
   </ol>
-  <ol> <b>2st Sprint:<b>
+  <ol> <b>2st Sprint:</b>
     <li> created main page + CSS </li>
     <li> created program page + CSS </li>
     <li> created movie page + CSS </li>
