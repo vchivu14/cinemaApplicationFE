@@ -3,7 +3,7 @@
 <h3>This web application was an assignment at KEA Copenhagen, Computer Science</h3> 
 
 # Overview: 
-A FE solution for a cinema franchise based on the capabilities of the REST API mentioned at the bottom </li>
+A FE solution for a cinema franchise based on the capabilities of the REST API mentioned at the bottom.
 
 # In this project we will use:
 <ul>
@@ -24,32 +24,31 @@ https://cinemaisus.surge.sh/
 # Responsabilities:
 <ul>
  <li> Vlad Chivu (back-end)
-   <ol> 1st Sprint
-    <li> set up Spring project structure</li>
-    <li> designed the database</li>
-    <li> designed endpoints </li>
-    <li> documented back-end endpoints</li>
-    <li> set up backend server on Heroku</li>
-    <li> designed page mockup for adding movies and implementation of it</li>
+   <ol> <b>1st Sprint:<b>
+    <li> set up Spring project </li>
+    <li> designed the database </li>
+    <li> designed & implemented endpoints </li>
+    <li> documented endpoints </li>
+    <li> set up backend server on Heroku </li>
    </ol>
-   <ol> 2nd Sprint
-    <li> Created the structure for cinema dashboard pages
-    <li> Created filter functionality for cinema movie tables
-    <li> Created and styled form used in movie creation
+   <ol> <b>2nd Sprint:<b>
+    <li> created the structure for cinema dashboard pages
+    <li> created filter functionality for cinema movies
+    <li> designed & created a page for adding movies
    </ol>
  </li>
  <li> Simon Bucko (front-end)
-  <ol> 1st Sprint
-    <li>Designed front-end in the Figma designing tool</li>
-    <li>Create a basic structure for our customer journey</li>
-    <li>implemented initial design according to mockups from figma</li>
+  <ol> <b>1st Sprint:<b>
+    <li> designed front-end using Figma designing tool </li>
+    <li> created a basic structure for our customer journey </li>
+    <li> implemented initial design according to mockups </li>
   </ol>
-  <ol> 2st Sprint
-    <li>created main page + CSS</li>
-    <li>created program page + CSS</li>
-    <li>created movie page + CSS</li>
-    <li>created dashboard/movies page + CSS</li>
-    <li>Connected back-end REST APIs on front-end</li>
+  <ol> <b>2st Sprint:<b>
+    <li> created main page + CSS </li>
+    <li> created program page + CSS </li>
+    <li> created movie page + CSS </li>
+    <li> created dashboard/movies page + CSS </li>
+    <li> connected back-end REST APIs with front-end pages </li>
   </ol>
  </li>
 </ul>
